@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Noto+Kufi+Arabic&display=swap');
+
+:root{
+    --blue: #1F1F42;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4rem 4rem;
+    background-color: #fff;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .1);
+    z-index: 100;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo img{
+    height: 1.2rem;
+}
+
+.logo a{
+    font-weight: bold;
+    color: orangered;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.logo a span{
+    color: black;
+}
+
+.menu-bar{
+    cursor: pointer;
+    display: none;
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(72, 70, 70);
+    padding: .3rem 1.2rem;
+    text-transform: capitalize;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+header button{
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+header button:hover{
+    background-color: var(--blue);
+}
+
+main{
+   background-color: rgb(255, 255, 255);
+}
+
+main .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+main .container .col1, main .container .col2{
+    flex: 1;
+}
+main .container .col2{
+    position: relative;
+}
+
+.titre{
+    font-size:  2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.titre span{
+    text-shadow: .2rem .2rem orangered;
+}
+
+.sous-titre{
+    color: rgb(46, 48, 48);
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.free h2, .cent-vinght h2 {
+    color: orangered;
+    font-size: 2rem;
+}
+.free p, .cent-vinght p {
+    font-size: 1.1rem;
+}
+
+main .container .col1 .free-cent{
+    display: flex;
+    justify-content: start;
+    margin-top: 3rem;
+}
+
+.free, .cent-vinght{
+    width: 7rem;
+}
+.free{
+    margin-right: 5rem;
+}
+
+.col2 img {
+    display: block;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.orangered{
+    position: absolute;
+    right: -4rem;
+    bottom: 10rem;
+    width: 40rem;
+    height: 17rem;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    background-color: orangered;   
+}
+
+.barr{
+    display: flex;
+    padding: 2rem;
+    padding-right: 4rem;
+    margin: auto;
+    justify-content: space-around;
+    background-color: rgb(40, 40, 40);
+  }
+  
+  .barr h3{
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+  }
+
+  .to-top{
+      position: fixed;
+      right: .3rem;
+      bottom: 1rem;
+      cursor: pointer;
+      background-color: orangered;
+      border: none;
+      border-radius: .3rem;
+      transition: opacity 1s, visibility .7s;
+      opacity: 0;
+      visibility: hidden;
+  }
+  .to-top i{
+    color: #1F1F42;
+    font-size: 2rem;
+    padding: .5rem;
+    transition:all .5s ease;
+  }
+  .to-top:hover i{
+      transform: scale(.8);
+      color: white;
+  }
+  .to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*PRODUCTS SECTION*/
+
+.products{
+    padding: 2vh 5% 5vh 5%;
+}
+.products .title{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    text-shadow: 0 .1rem .2rem orangered;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap: 1.5rem;
+}
+.products-container .product-card{
+    text-align: center;
+    background-color: #FCFCFC;
+    padding: 1.5rem;
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1rem;
+    cursor: pointer;
+}
+.products-container .product-card:hover{
+    outline: .1rem solid rgb(23, 22, 22);
+    outline-offset: 0rem;
+}
+.product-card img{
+    height: 11rem;
+}
+
+.products-container .product-card:hover img{
+    transform: scale(.9);
+}
+.products-container .product-card h3{
+    font-size: 1.5rem;
+    color: #444;
+    padding: .5rem;
+}
+.products-container .product-card:hover h3{
+    color: rgb(18, 121, 204);
+}
+
+.price-stars{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 10%;
+}
+
+.products-container .product-card .price-stars .price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background-color: #1F1F42;
+    padding: .2rem;
+}
+.products-container .product-card .price-stars .stars i{
+    font-size: 1.2rem;
+    color: goldenrod;
+}
+
+.products-container .product-card .buttons button{
+    width: 5rem;
+    height: 2rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+.products-container .product-card .buttons .Buy,
+.products-container .product-card .buttons .Add:hover{
+    background-color: orangered;
+    color: white;
+    border: none;
+}
+
+.products-container .product-card .buttons .Add,
+.products-container .product-card .buttons .Buy:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+/*CONTACT SECTION*/
+
+  .contact{
+    padding: 10vh 5%;
+    background-color: rgb(239, 234, 234);
+}
+
+.contact-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    border: none;
+    border-radius: .9rem;
+    background-color: rgb(245, 245, 238);
+    box-shadow: .25rem .25rem .8rem .3rem rgb(205, 204, 204);
+}
+
+.contact-map{
+   flex:1;
+   min-width: 21rem;
+   padding: calc(5%/2);
+}
+.contact-map iframe{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.contact-form{
+   flex:1;
+   min-width: 21rem;
+   padding: calc(5%/2);
+}
+
+
+input, textarea{
+    outline: none;
+    border: none;
+}
+
+.contact-form > h3{
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(41, 40, 40);
+}
+
+.forminput{
+    width: 100%;
+    height: 3rem;
+    margin-top: 1.2rem;
+    border-radius: .25rem;
+    padding-left: .3rem;
+    font-family: inherit;
+}
+
+.formtxtarea{
+    width: 100%;
+    height: 9rem;
+    margin-top: 1.2rem;
+    border-radius: .5rem;
+    padding-left: .3rem;
+    padding-top: .3rem;
+    font-family: inherit;
+}
+
+.formbtn{
+    width: 100%;
+    height: 2rem;
+    padding: auto;
+    border: none;
+    border-radius: 1rem;
+    background-color: orangered;
+    color: white;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 18px;
+    font-family: inherit;
+}
+.formbtn:hover{
+    background-color: rgb(255, 38, 0);
+}
+
+footer{
+    background-color: #1f1f42;
+    color: #FCFCFC;
+    padding-top: 2rem 5%; 
+}
+.footer-infos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.useful-links, .newsletter, .footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.useful-links> h2, .newsletter> h2, .footer-contact> h2{
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+.useful-links> ul{
+    list-style: none;
+}
+
+.useful-links> ul> li{
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter> .input1{
+    height: 45px;
+    width: 350px;
+    margin-top: 1.2rem;
+    border-radius: .3rem;
+    margin-bottom: 1.2rem;
+    padding-left: .3rem;
+}
+.newsletter> .input1::placeholder{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.newsletter> button{
+    width: 13rem;
+    height: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+.footer-contact> p{
+    margin-top: 1.2rem;
+}
+
+.footer-contact> ul{
+    margin-top: 1.2rem;
+    list-style: none;
+    display: flex;
+}
+
+.footer-contact> ul> li{
+ margin: .8rem 1.2rem;
+ cursor: pointer;
+}
+
+i{
+    font-size: 1.2rem;
+}
+
+/*Media queries*/
+@media (max-width:1024px){
+    .orangered{
+        position: absolute;
+        right: -4rem;
+        bottom: 14rem;
+        width: 30rem;
+        height: 13rem;  
+    }
+}
+@media (max-width:700px){
+    html{
+        font-size: 70%;
+    }
+    .barr{
+        display: none;
+    }
+    .orangered{
+        position: absolute;
+        right: -4rem;
+        bottom: 10rem;
+        width: 30rem;
+        height: 13rem;  
+    }
+}
+@media (max-width:600px) {
+    html{
+        font-size: 80%;
+    }
+    header{
+        padding: .5rem 1rem;
+        box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+    }
+    header nav{
+        position: absolute;
+        top: 100%;right: 0;left: 0;
+        background-color: orangered;
+        transform: translateY(-30rem);
+        transition: .8s ease;
+    }
+    header nav.active{
+        position: absolute;
+        top: 100%;right: 0;left: 0;
+        background-color: rgba(255,69,0,0.8);
+        transform: translateY(0rem);
+    }
+    header nav a{
+        display: block;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 1rem;
+        color: #ccc;
+    }
+    header nav a:hover{
+        background-color: rgb(86, 128, 130);
+    }
+    .menu-bar{
+        display: block;
+        font-size: 1.8rem;
+        background-image: linear-gradient(to right, black, orangered);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    .col2 img{
+        height: 26rem;
+    }
+    .orangered{
+        position: absolute;
+        right: -4rem;
+        bottom: 7rem;
+        width: 27rem;
+        height: 12rem;  
+    }
+}
+@media (max-width:600px){
+    .col2 img{
+        height: 20rem;
+    }
+}
